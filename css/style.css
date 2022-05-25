@@ -22,7 +22,7 @@
 
 .aside{
     height: calc(100vh - 100px);
-    min-width: 268px;
+    /* min-width: 268px; */
     width: 268px;
     background-color: #000000;
     z-index: 20;
@@ -33,8 +33,6 @@
 .wrapper{
     background-color: #141922;
     overflow-y: scroll;
-    overflow-x: hidden;
-    left: 268px;
     width: calc(100% - 267px);
     height: calc(100vh - 100px);
 }
@@ -123,6 +121,12 @@ footer{
     padding: 20px;
 }
 
+.small-logo{
+    width: 60%;
+    margin: 20px auto;
+    display: none;
+}
+
 .aside-flex{
     display: flex;
     justify-content: space-between;
@@ -203,8 +207,6 @@ footer{
 }
 
 .download-app>img{
-    display: flex;
-    align-items: center;
     width: 10%;
 }
 
@@ -367,7 +369,54 @@ main>section>span{
 
 @media all and (max-width: 601px){
     
-    .card{
-        width: calc(100% / 2 - 15px);
-    } 
+    .aside-up>ul>li>div{
+        display: none;
+    }
+
+    .li-no-active, .li-active{
+        border: none;
+    }
+
+    .aside-icon{
+        width: 90%;
+    }
+
+    .aside{
+        /* min-width: 80; */
+        width: 80px;
+    }
+
+    .wrapper{
+        width: calc(100% - 80px);
+    }
+
+    .small-logo{
+        display: block;
+    }
+
+    .big-logo{
+        display: none;
+    }
+
+    .aside-playlist{
+        display: none;
+    }
+
+    .download-app>span, .profile>strong, .spacer{
+        display: none;
+    }
+
+    .download-app>img{
+        width: 50%;
+        margin: 10px;
+        transform: translateX(-5px);
+    }
+
+    .profile>img{
+        width: 70%;
+    }
+
+    .aside-bot{
+        padding-left: 15px;
+    }
 }
