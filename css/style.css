@@ -22,7 +22,6 @@
 
 .aside{
     height: calc(100vh - 100px);
-    /* min-width: 268px; */
     width: 268px;
     background-color: #000000;
     z-index: 20;
@@ -64,6 +63,7 @@ footer{
     bottom: 0;
     left: 0;
     z-index: 90;
+    overflow-x: hidden;
 }
 
 /* Cummon Classes */
@@ -188,6 +188,7 @@ footer{
 .playlist-list{
     list-style: none;
     max-height: 25vh;
+    min-height: 10vh;
     overflow-y: scroll;
 }
 
@@ -338,16 +339,147 @@ main>section>span{
 
 /* Footer */
 
+footer>section{
+    height: 100%;
+}
+
 .footer-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+    height: 100%;
 }
 
-.footer-box{
-    width: 100px;
-    height: 50px;
+.now-playing{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
 }
+
+.now-playing>img{
+    /* width: 80px; */
+    width: 15%;
+    max-width: 90px;
+}
+
+.n-playing-text>*{
+    display: block;
+}
+
+.n-playing-text>span, .settings>i{
+    color: var(--LightGrey);
+}
+
+.settings>i{
+    color: white;
+}
+
+.active-volume::after, .player-bar-active::after{
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: white;
+    display: none;
+    position: absolute;
+    right: 0;
+    transform: translateY(-3px);
+}
+
+.volume:hover .active-volume{
+    background-color: var(--Green);
+}
+
+.volume:hover .active-volume::after{
+    display: block;
+}
+
+.playing-icons>i{
+    color: var(--LightGrey);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.settings{
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.volume{
+    width: 8vw;
+    background-color: var(--LightGrey);
+    height: 0.4rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.active-volume{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3vw;
+    height: 0.4rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-top{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.player-top>i{
+    font-size: 30px;
+    color: white;
+}
+
+.player-bot{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.player-bot>span{
+    color: white;
+}
+
+.player-bar{
+    width: 35vw;
+    height: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--LightGrey);
+    position: relative;
+}
+
+.player-bar-active{
+    width: 10vw;
+    height: 0.5rem;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+}
+
+.player-bar:hover .player-bar-active{
+    background-color: var(--Green);
+}
+
+.player-bar:hover .player-bar-active::after{
+    display: block;
+}
+
 
 /* Responsive */
 
@@ -418,5 +550,10 @@ main>section>span{
 
     .aside-bot{
         padding-left: 15px;
+    }
+
+    .playing-icons>i{
+        display: block;
+        margin-bottom: 10px;
     }
 }
