@@ -88,6 +88,7 @@ footer{
     cursor: pointer;
 }
 
+
 .spacer{
     width: 80%;
     border-bottom: 1px solid var(--LightGrey);
@@ -157,6 +158,10 @@ footer{
 
 .li-no-active{
     border-left: 3px solid black;
+}
+
+.li-no-active:hover{
+    border-left-color: #ADFF2F;
 }
 
 .aside-playlist{
@@ -326,15 +331,21 @@ main>section>span{
     color: white;
 }
 
-.active-nav{
+.main-nav li a:hover::after{
+    visibility: visible;
+}
+
+.main-nav li a::after{
+    content: "";
     position: absolute;
     bottom: 0;
-    left: 25px;
-    width: 60px;
+    left: 20%;
+    right: 20%;
     height: 2px;
     display: block;
     z-index: 99;
     background-color: var(--Green);
+    visibility: hidden;
 }
 
 /* Footer */
