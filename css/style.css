@@ -1,0 +1,188 @@
+:root{
+    --DarkGrey: #282828;
+    --DarkBlue: #141922;
+    --LightGrey: #717179;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: 1px solid red;
+}
+
+
+/* Structure */
+
+.f-container{
+    display: flex;
+}
+
+.aside{
+    height: calc(100vh - 100px);
+    min-width: 268px;
+    width: 268px;
+    background-color: #000000;
+    z-index: 20;
+}
+
+.wrapper{
+    background-color: #141922;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: 268px;
+    width: calc(100% - 267px);
+    height: calc(100vh - 100px);
+}
+
+header{
+    height: 100px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: flex-end;
+}
+
+main{
+    width: 100%;
+    height: 2000px;
+    background-color: #141922;
+    padding: 40px;
+    color: rgb(204, 204, 204);
+}
+
+footer{
+    width: 100vw;
+    height: 100px;
+    background-color: #282828;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* Cummon Classes */
+
+.pad-bot-top{
+    padding: 20px 0;
+}
+
+.pad-bot{
+    padding-bottom: 20px;
+}
+
+/* Header */
+
+.upgrade-button{
+    padding: 10px 30px;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid var(--LightGrey);
+    display: inline-block;
+    align-self: center;
+    transition: .5s;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.upgrade-button:hover{
+    transform: scale(1.10);
+}
+
+/* Main */
+
+.playlist-flex{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card{
+    width: calc(100% / 6 - 50px);
+    height: 300px;
+    background-color: bisque;
+    margin-bottom: 50px
+}
+
+/* Nav-Main */
+
+.main-nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.25rem;
+    text-align: center;
+    position: relative;
+    line-height: 40px;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: var(--LightGrey);
+    text-transform: uppercase;
+}
+
+.main-nav li a:hover{
+    color: white;
+}
+
+.active-nav{
+    position: absolute;
+    bottom: 0;
+    left: 37px;
+    width: 60px;
+    height: 2px;
+    display: block;
+    z-index: 99;
+    background-color: green;
+}
+
+/* Recently Played */
+
+main>section>h2{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+/* Footer */
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-box{
+    width: 100px;
+    height: 50px;
+}
+
+/* Responsive */
+
+@media all and (max-width: 1100px){
+    
+    main{
+        background-color: red;
+    }
+
+    .card{
+        width: calc(100% / 4);
+    } 
+}
+
+@media all and (max-width: 701px){
+
+}
