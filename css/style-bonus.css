@@ -88,6 +88,9 @@ footer{
     cursor: pointer;
 }
 
+.pad-left{
+    padding-left: 23px;
+}
 
 .spacer{
     width: 80%;
@@ -216,7 +219,6 @@ footer{
 
 .aside-bot{
     padding-left: 23px;
-    z-index: 50;
 }
 
 .download-app{
@@ -607,7 +609,7 @@ footer>section{
         display: none;
     }
 
-    .aside-playlist{
+    .playlist-list, .color-white.pad-left.mar-bot-20, .add-playlist.mar-bot-20.pad-left{
         display: none;
     }
 
