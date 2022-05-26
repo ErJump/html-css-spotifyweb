@@ -335,6 +335,17 @@ main>section>span{
     visibility: visible;
 }
 
+.active-nav{
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    display: block;
+    z-index: 99;
+    background-color: var(--Green);
+}
+
 .main-nav li a::after{
     content: "";
     position: absolute;
@@ -365,12 +376,12 @@ footer>section{
 .now-playing{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     padding-left: 20px;
+    flex-grow: 1;
 }
 
 .now-playing>img{
-    /* width: 80px; */
     width: 15%;
     max-width: 90px;
 }
@@ -389,14 +400,14 @@ footer>section{
 
 .active-volume::after, .player-bar-active::after{
     content: "";
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 0.9rem;
+    height: 0.9rem;
     border-radius: 50%;
     background-color: white;
     display: none;
     position: absolute;
-    right: 0;
-    transform: translateY(-3px);
+    right: -5px;
+    transform: translateY(-4px);
 }
 
 .volume:hover .active-volume{
@@ -420,6 +431,7 @@ footer>section{
     align-items: center;
     width: 20%;
     justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .volume{
@@ -447,6 +459,7 @@ footer>section{
     gap: 10px;
     min-width: 200px;
     width: 60%;
+    flex-grow: 2;
 }
 
 .player-top{
@@ -537,7 +550,7 @@ footer>section{
     }
 
     .now-playing{
-        gap: 5px;
+        gap: 10px;
         padding-left: 0px;
     }
 }
@@ -547,6 +560,10 @@ footer>section{
     .card{
         width: calc(100% / 2 - 15px);
     } 
+
+    .player-bot>span{
+        font-size: .8rem;
+    }
 }
 
 @media all and (max-width: 601px){
@@ -564,7 +581,6 @@ footer>section{
     }
 
     .aside{
-        /* min-width: 80; */
         width: 80px;
     }
 
